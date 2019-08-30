@@ -1,4 +1,4 @@
-#!/usr/env/bin bash
+#!/bin/bash
 set -e
 
 if [ "$#" -eq 0 ]; then
@@ -10,7 +10,7 @@ fi
 echo "#########################################"
 echo "Starting ${GITHUB_WORKFLOW}:${GITHUB_ACTION}"
 
-bash -c "$FLAKE8_COMMAND"
+/bin/bash -c "$FLAKE8_COMMAND"
 
 echo "#########################################"
 echo "Completed ${GITHUB_WORKFLOW}:${GITHUB_ACTION}"
